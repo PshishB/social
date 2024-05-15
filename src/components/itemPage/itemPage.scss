@@ -1,0 +1,36 @@
+.artcile__itemPage{
+    min-height: 100vh;
+    background-color: white;
+    padding: 14px;
+    box-shadow: 0 4px 12px 0 #00000026;
+    margin: 15px 0 5px;
+}
+.item__botPageP{
+    margin: 20px 0;
+    font-size: 12px;
+    line-height: 22px;
+    max-width: 700px;
+    color: #00000080;
+}
+.item__botPage{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.item__botBtns{
+    display: flex;
+    gap:12px;
+}
+.item__modal{
+    width: 280px !important;
+    height: 104px !important;
+}
+.item__modalP{
+    color: #595959;
+    font-size: 14px;
+    margin-right: 7px;
+    
+}
+.item__modalP::before{
+    content: url(../../../public/imgs/Frame19.svg);
+}
