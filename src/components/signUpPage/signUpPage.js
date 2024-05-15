@@ -32,7 +32,7 @@ const SignUpPage = () => {
     const realData = {
       user: newData,
     };
-    dispatch(createUser(realData));
+    dispatch(createUser(realData)).then(() => navigate('/'));
   };
 
   const validatePasswordRepeat = (value) => {

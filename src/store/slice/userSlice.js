@@ -136,6 +136,7 @@ const userSlice = createSlice({
       .addCase(createUser.fulfilled, (state, action) => {
         state.status = 'resolved';
         state.user = action.payload;
+        state.login = true;
         state.error = null;
       })
       .addCase(createUser.rejected, (state, action) => {
