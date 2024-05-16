@@ -7,7 +7,6 @@ import { updateUser } from '../../store/slice/userSlice';
 const ProfilePage = () => {
   const tokenUser = useSelector((state) => state.user.user.user.token);
   const user = useSelector((state) => state.user.user.user);
-  console.log(user);
   const dispatch = useDispatch();
   const {
     register,
@@ -18,7 +17,6 @@ const ProfilePage = () => {
     const realData = {
       user: data,
     };
-    console.log(realData);
     dispatch(updateUser({ data: realData, tokenUser: tokenUser }));
   };
   return (

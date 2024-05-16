@@ -17,7 +17,6 @@ const ItemPage = () => {
   const username = useSelector((state) => (state.user.user ? state.user.user.user.username : null));
   const tokenUser = useSelector((state) => (state.user.user ? state.user.user.user.token : null));
   const currentArticle = useSelector((state) => state.article.currentArticle);
-  console.log(currentArticle);
   const likes = useSelector((state) => state.user.favorited);
 
   useEffect(() => {
@@ -48,7 +47,6 @@ const ItemPage = () => {
 
   const onLikeClick = () => {
     if (tokenUser) {
-      console.log(slug, tokenUser);
       dispatch(favorite({ slug, token: tokenUser }));
       dispatch(likeArticlePage(slug));
     }

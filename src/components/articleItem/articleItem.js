@@ -27,14 +27,12 @@ const ArticleItem = ({ title, body, tagList, author, slug, updatedAt, favoritesC
   const time = new Date(updatedAt);
   const onLikeClick = () => {
     if (token) {
-      dispatch(favorite({ slug, token }));
-      dispatch(likeArticle(slug));
+      dispatch(favorite({ slug, token })).then(() => dispatch(likeArticle(slug)));
     }
   };
   const onDislikeClick = () => {
     if (token) {
-      dispatch(unFavorite({ slug, token }));
-      dispatch(unLikeArticle(slug));
+      dispatch(unFavorite({ slug, token })).then(() => dispatch(unLikeArticle(slug)));
     }
   };
   const tags = tagList.map((tag, index) => {

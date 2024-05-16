@@ -11,7 +11,6 @@ const EditArticlePage = () => {
   const dispatch = useDispatch();
   const { slug } = useParams();
   const currentArticle = useSelector((state) => state.article.currentArticle);
-  console.log(currentArticle);
   const { title, tagList, body, description } = currentArticle;
   useEffect(() => {
     dispatch(fetchCurrentArticle(slug));
